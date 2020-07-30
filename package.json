@@ -1,0 +1,18 @@
+{
+  "name": "@surge/example-githooks",
+  "version": "0.2.0",
+  "description": "An example of using git hooks with npm run scripts to publish to Surge.",
+  "repository": "https://github.com/vsamaru/surge.git",
+  "devDependencies": {
+    "git-scripts": "^0.4.3",
+    "surge": "^0.21.6"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "npm run deploy"
+    }
+  },
+  "scripts": {
+    "deploy": "surge --project ./ --domain o6.surge.sh"
+  }
+}
